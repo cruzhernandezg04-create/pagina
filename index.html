@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="img/cemsis.webp">
     <title>CEMSA </title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVL1WCKRJ7"></script>
@@ -228,16 +229,12 @@
             <div class="card-interaccion">
                 <div class="cabecera-azul">Síguenos</div>
                 <p class="desc-interaccion">Síguenos en todas nuestras redes sociales</p>
-                <!-- Contenedor para el widget de Facebook -->
-                <div class="embed-redes" style="display: flex; justify-content: center; border-radius: 8px; overflow: hidden; background-color: #f0f2f5;">
-                    <iframe 
-                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCEMSARecubrimientos&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true" 
-                        width="100%" 
-                        height="300" 
-                        style="border:none;overflow:hidden; max-width: 340px;" 
-                        scrolling="no" 
-                        frameborder="0" 
-                        allowfullscreen="true" 
+                <div class="embed-redes"
+                    style="display: flex; justify-content: center; border-radius: 8px; overflow: hidden; background-color: #f0f2f5;">
+                    <iframe
+                        src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCEMSARecubrimientos&tabs=timeline&width=340&height=300&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                        width="100%" height="300" style="border:none;overflow:hidden; max-width: 340px;" scrolling="no"
+                        frameborder="0" allowfullscreen="true"
                         allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share">
                     </iframe>
                 </div>
@@ -357,8 +354,10 @@
             <!--Mapa de Google-->
             <div class="contacto-mapa">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15026.0123456789!2d-99.1234567!3d19.654321!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDM5JzE1LjYiTiA5OcKwMDcnMjQuNCJX!5e0!3m2!1ses-419!2smx!4v1610000000000!5m2!1ses-419!2smx"
-                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3757.4808794386395!2d-99.1239451!3d19.6494793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f440306156a3%3A0x17e336b2b2b06844!2sCEMSA%20Recubrimientos!5e0!3m2!1ses-419!2smx!4v1791310033450!5m2!1ses-419!2smx"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin">"
+                </iframe>
             </div>
         </div>
     </section>
@@ -458,6 +457,50 @@
         </div>
     </footer>
 
+    <!--SISTEMA DE COOKIES-->
+    <!-- Banner Principal -->
+    <div id="cookie-banner" class="cookie-banner">
+        <div class="cookie-texto">
+            <h3 style="margin-top:0; color:var(--color-azul);">Privacidad y Cookies</h3>
+            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte contenido personalizado
+                en base a tus hábitos de navegación. Puedes aceptar todas las cookies, rechazarlas o configurar tus
+                preferencias.</p>
+        </div>
+        <div class="cookie-botones">
+            <button id="btn-configurar" class="btn-cookie btn-secundario">Configurar</button>
+            <button id="btn-rechazar" class="btn-cookie btn-secundario">Rechazar</button>
+            <button id="btn-aceptar" class="btn-cookie btn-principal">Aceptar Todas</button>
+        </div>
+    </div>
+
+    <!-- Modal de Configuración -->
+    <div id="cookie-modal" class="cookie-modal">
+        <div class="cookie-modal-contenido">
+            <h3 style="color:var(--color-azul); margin-top:0;">Configuración de Cookies</h3>
+            <p style="font-size: 0.9rem; color: #555;">Selecciona qué tipo de cookies deseas permitir en tu navegador:
+            </p>
+
+            <div class="opcion-cookie">
+                <label>
+                    <input type="checkbox" checked disabled>
+                    <strong>Técnicas (Estrictamente necesarias)</strong>
+                </label>
+                <p>Son necesarias para que la página funcione (ej. guardar tu sesión). No se pueden desactivar.</p>
+            </div>
+
+            <div class="opcion-cookie">
+                <label>
+                    <input type="checkbox" id="check-analiticas" checked>
+                    <strong>Analíticas y Rendimiento</strong>
+                </label>
+                <p>Nos ayudan a entender cómo usas la página para mejorar su diseño y funcionalidad.</p>
+            </div>
+
+            <button id="btn-guardar-config" class="btn-cookie btn-principal"
+                style="width:100%; margin-top:20px;">Guardar Preferencias</button>
+        </div>
+    </div>
+
     <!--SCRIPT PARA EL FUNCIONAMIENTO DEL CARRUSEL-->
     <script>
         let slideActual = 0;
@@ -475,6 +518,49 @@
 
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('activo');
+        });
+
+        const bannerCookies = document.getElementById('cookie-banner');
+        const modalCookies = document.getElementById('cookie-modal');
+
+        // Cookies
+
+        // 1. Verificamos si ya existe una configuración guardada
+        if (!localStorage.getItem('estadoCookies')) {
+            bannerCookies.classList.add('activo');
+        } else {
+            // Aquí es donde, en el futuro, pondrías un 'if' para cargar Google Analytics 
+            // solo si localStorage.getItem('cookiesAnaliticas') === 'true'
+            console.log("Preferencias cargadas:", localStorage.getItem('estadoCookies'));
+        }
+
+        // 2. Botón Aceptar Todas
+        document.getElementById('btn-aceptar').addEventListener('click', () => {
+            localStorage.setItem('estadoCookies', 'aceptadas');
+            localStorage.setItem('cookiesAnaliticas', 'true');
+            bannerCookies.classList.remove('activo');
+        });
+
+        // 3. Botón Rechazar (Solo deja las técnicas)
+        document.getElementById('btn-rechazar').addEventListener('click', () => {
+            localStorage.setItem('estadoCookies', 'rechazadas');
+            localStorage.setItem('cookiesAnaliticas', 'false');
+            bannerCookies.classList.remove('activo');
+        });
+
+        // 4. Botón Configurar (Abre la ventana flotante)
+        document.getElementById('btn-configurar').addEventListener('click', () => {
+            modalCookies.classList.add('activo');
+        });
+
+        // 5. Botón Guardar dentro de Configuración
+        document.getElementById('btn-guardar-config').addEventListener('click', () => {
+            const analiticasActivadas = document.getElementById('check-analiticas').checked;
+            localStorage.setItem('estadoCookies', 'personalizadas');
+            localStorage.setItem('cookiesAnaliticas', analiticasActivadas.toString());
+
+            modalCookies.classList.remove('activo');
+            bannerCookies.classList.remove('activo');
         });
     </script>
 
