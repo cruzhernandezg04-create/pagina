@@ -456,15 +456,33 @@
             </p>
         </div>
     </footer>
+<!--SISTEMA DE COOKIES y GOOGLE ANALYTICS-->
+         
+    <!-- 1. Configuración de Google Analytics (Consent Mode) -->
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
 
-    <!--SISTEMA DE COOKIES-->
-    <!-- Banner Principal -->
+        // Revisa si el usuario ya había aceptado antes; si no, bloquea el rastreo por defecto
+        let estadoPrevio = localStorage.getItem('cookiesAnaliticas') === 'true' ? 'granted' : 'denied';
+        
+        gtag('consent', 'default', {
+            'analytics_storage': estadoPrevio
+        });
+    </script>
+    
+    <!-- Tu etiqueta original de gtag.js -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVL1WCKRJ7"></script>
+    <script>
+        gtag('js', new Date());
+        gtag('config', 'G-CVL1WCKRJ7');
+    </script>
+
+    <!-- 2. Banner Principal -->
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-texto">
             <h3 style="margin-top:0; color:var(--color-azul);">Privacidad y Cookies</h3>
-            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte contenido personalizado
-                en base a tus hábitos de navegación. Puedes aceptar todas las cookies, rechazarlas o configurar tus
-                preferencias.</p>
+            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte contenido personalizado. Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias.</p>
         </div>
         <div class="cookie-botones">
             <button id="btn-configurar" class="btn-cookie btn-secundario">Configurar</button>
@@ -473,34 +491,77 @@
         </div>
     </div>
 
-    <!-- Modal de Configuración -->
+    <!-- 3. Modal de Configuración -->
     <div id="cookie-modal" class="cookie-modal">
         <div class="cookie-modal-contenido">
             <h3 style="color:var(--color-azul); margin-top:0;">Configuración de Cookies</h3>
-            <p style="font-size: 0.9rem; color: #555;">Selecciona qué tipo de cookies deseas permitir en tu navegador:
-            </p>
-
+            <p style="font-size: 0.9rem; color: #555;">Selecciona qué tipo de cookies deseas permitir en tu navegador:</p>
+            
             <div class="opcion-cookie">
                 <label>
-                    <input type="checkbox" checked disabled>
-                    <strong>Técnicas (Estrictamente necesarias)</strong>
+                    <input type="checkbox" checked disabled> 
+                    <strong>Técnicas (Obligatorias)</strong>
                 </label>
-                <p>Son necesarias para que la página funcione (ej. guardar tu sesión). No se pueden desactivar.</p>
+                <p>Son necesarias para que la página funcione. No se pueden desactivar.</p>
             </div>
-
+            
             <div class="opcion-cookie">
                 <label>
-                    <input type="checkbox" id="check-analiticas" checked>
-                    <strong>Analíticas y Rendimiento</strong>
+                    <input type="checkbox" id="check-analiticas" checked> 
+                    <strong>Google Analytics</strong>
                 </label>
                 <p>Nos ayudan a entender cómo usas la página para mejorar su diseño y funcionalidad.</p>
             </div>
 
-            <button id="btn-guardar-config" class="btn-cookie btn-principal"
-                style="width:100%; margin-top:20px;">Guardar Preferencias</button>
+            <button id="btn-guardar-config" class="btn-cookie btn-principal" style="width:100%; margin-top:20px;">Guardar Preferencias</button>
         </div>
     </div>
 
+    <!-- 4. Lógica de los botones -->
+    <script>
+        const bannerCookies = document.getElementById('cookie-banner');
+        const modalCookies = document.getElementById('cookie-modal');
+        
+        // Muestra el banner si es la primera vez que entra
+        if (!localStorage.getItem('estadoCookies')) {
+            bannerCookies.classList.add('activo');
+        }
+
+        // Función para activar Google Analytics y guardar en localStorage
+        function activarAnalytics(permitir) {
+            const estado = permitir ? 'granted' : 'denied';
+            gtag('consent', 'update', { 'analytics_storage': estado });
+            localStorage.setItem('cookiesAnaliticas', permitir.toString());
+        }
+
+        // Botón Aceptar Todas
+        document.getElementById('btn-aceptar').addEventListener('click', () => {
+            localStorage.setItem('estadoCookies', 'aceptadas');
+            activarAnalytics(true);
+            bannerCookies.classList.remove('activo');
+        });
+
+        // Botón Rechazar
+        document.getElementById('btn-rechazar').addEventListener('click', () => {
+            localStorage.setItem('estadoCookies', 'rechazadas');
+            activarAnalytics(false);
+            bannerCookies.classList.remove('activo');
+        });
+
+        // Botones de Configuración
+        document.getElementById('btn-configurar').addEventListener('click', () => {
+            modalCookies.classList.add('activo');
+        });
+
+        document.getElementById('btn-guardar-config').addEventListener('click', () => {
+            const analiticasActivadas = document.getElementById('check-analiticas').checked;
+            localStorage.setItem('estadoCookies', 'personalizadas');
+            activarAnalytics(analiticasActivadas);
+            modalCookies.classList.remove('activo');
+            bannerCookies.classList.remove('activo');
+        });
+    </script>
+    
     <!--SCRIPT PARA EL FUNCIONAMIENTO DEL CARRUSEL-->
     <script>
         let slideActual = 0;
@@ -518,49 +579,6 @@
 
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('activo');
-        });
-
-        const bannerCookies = document.getElementById('cookie-banner');
-        const modalCookies = document.getElementById('cookie-modal');
-
-        // Cookies
-
-        // 1. Verificamos si ya existe una configuración guardada
-        if (!localStorage.getItem('estadoCookies')) {
-            bannerCookies.classList.add('activo');
-        } else {
-            // Aquí es donde, en el futuro, pondrías un 'if' para cargar Google Analytics 
-            // solo si localStorage.getItem('cookiesAnaliticas') === 'true'
-            console.log("Preferencias cargadas:", localStorage.getItem('estadoCookies'));
-        }
-
-        // 2. Botón Aceptar Todas
-        document.getElementById('btn-aceptar').addEventListener('click', () => {
-            localStorage.setItem('estadoCookies', 'aceptadas');
-            localStorage.setItem('cookiesAnaliticas', 'true');
-            bannerCookies.classList.remove('activo');
-        });
-
-        // 3. Botón Rechazar (Solo deja las técnicas)
-        document.getElementById('btn-rechazar').addEventListener('click', () => {
-            localStorage.setItem('estadoCookies', 'rechazadas');
-            localStorage.setItem('cookiesAnaliticas', 'false');
-            bannerCookies.classList.remove('activo');
-        });
-
-        // 4. Botón Configurar (Abre la ventana flotante)
-        document.getElementById('btn-configurar').addEventListener('click', () => {
-            modalCookies.classList.add('activo');
-        });
-
-        // 5. Botón Guardar dentro de Configuración
-        document.getElementById('btn-guardar-config').addEventListener('click', () => {
-            const analiticasActivadas = document.getElementById('check-analiticas').checked;
-            localStorage.setItem('estadoCookies', 'personalizadas');
-            localStorage.setItem('cookiesAnaliticas', analiticasActivadas.toString());
-
-            modalCookies.classList.remove('activo');
-            bannerCookies.classList.remove('activo');
         });
     </script>
 

@@ -1064,6 +1064,74 @@ nav a:hover {
     background-color: rgba(56, 182, 255, 0.1);
 }
 
+/*DISEÑO DE COOKIES*/
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-blanco);
+    border-top: 4px solid var(--color-azul);
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+    padding: 25px 5%;
+    display: none;
+    z-index: 9999;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.cookie-banner.activo {
+    display: flex;
+}
+
+.cookie-texto {
+    flex: 1;
+    min-width: 250px;
+}
+
+.cookie-texto p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: var(--texto-gris);
+}
+
+.cookie-botones {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.btn-cookie {
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn-principal {
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
+}
+
+.btn-principal:hover {
+    background-color: #2b95d6;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: var(--color-azul);
+    border: 2px solid var(--color-azul);
+}
+
+.btn-secundario:hover {
+    background-color: rgba(56, 182, 255, 0.1);
+}
+
 /* Modal de Configuración */
 .cookie-modal {
     position: fixed;
@@ -1090,6 +1158,8 @@ nav a:hover {
     max-width: 500px;
     width: 90%;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    max-height: 90vh;
+    overflow-y: auto;
 }
 
 .opcion-cookie {
@@ -1106,6 +1176,32 @@ nav a:hover {
     font-size: 0.85rem;
     color: var(--texto-gris);
     margin: 5px 0 0 25px;
+    line-height: 1.4;
+}
+
+/* ---RESPONSIVE DE COOKIES --- */
+@media (max-width: 768px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 5%;
+    }
+
+    .cookie-botones {
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .btn-cookie {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .cookie-modal-contenido {
+        padding: 20px;
+        width: 95%;
+    }
 }
 
 
