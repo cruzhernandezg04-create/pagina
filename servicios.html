@@ -8,24 +8,27 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="servicios.css">
     <link rel="icon" href="img/cemsis.webp">
+    <!-- Preconexiones para acelerar carga externa -->
+    <link rel="preconnect" href="https://www.google.com" crossorigin>
+    <link rel="preconnect" href="https://www.facebook.com" crossorigin>
     <!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-CVL1WCKRJ7"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVL1WCKRJ7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-		gtag('config', 'G-CVL1WCKRJ7');
-	</script>
+        gtag('config', 'G-CVL1WCKRJ7');
+    </script>
 </head>
 
 <body>
     <!--BARRA DE NAVEGACIÓN-->
     <header>
         <div class="logo-container">
-            <img src="img/logoCemsa.webp" alt="Logo CEMSA" class="logo-img">
+            <img src="img/logoCemsa.webp" loading="lazy" alt="Logo CEMSA" class="logo-img">
         </div>
-        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú de navegación">☰</button>
 
         <nav id="nav-menu">
             <ul>
@@ -52,7 +55,7 @@
                     facturación.
                 </p>
                 <div class="intro-imagen">
-                    <img src="img/Servicios.webp" alt="Servicios">
+                    <img src="img/Servicios.webp" loading="lazy" alt="Servicios">
                 </div>
             </div>
         </section>
@@ -82,7 +85,7 @@
                                 pintar, trabajan profesionales capacitados en cursos de hojalatería y pintura, quienes
                                 manejan a la perfección las diferentes técnicas que existen y las herramientas para
                                 hojalatería necesarias para la restauración de abolladuras, rayones y repintado.</p>
-                            <img src="img/Hojalatería y pintura.webp" alt="Hojalatería y pintura">
+                            <img src="img/Hojalatería y pintura.webp" loading="lazy" alt="Hojalatería y pintura">
                         </div>
                     </div>
                     <div class="panel-tab" id="panel-flotillas">
@@ -91,7 +94,7 @@
                             <p>Este servicio consiste en el repintado automotriz en el que favorece a las flotillas de
                                 vehículos o medios de cualquier transporte de los que dispone tu empresa además que se
                                 le da un tema estético o se puede usar como protección a los vehículos.</p>
-                            <img src="img/Flotillas.webp" alt="Flotillas">
+                            <img src="img/Flotillas.webp" loading="lazy" alt="Flotillas">
                         </div>
                     </div>
                     <div class="panel-tab" id="panel-igualacion">
@@ -101,7 +104,7 @@
                                 fórmulas actualizadas o si es necesario, mediante la igualación experimental real de
                                 colores de pintura en el laboratorio con el uso de sistemas específicos del cliente..
                             </p>
-                            <img src="img/Igualación.webp" alt="Igualación">
+                            <img src="img/Igualación.webp" loading="lazy" alt="Igualación">
                         </div>
                     </div>
                 </div>
@@ -129,7 +132,7 @@
                             <p>Contamos con un igualador capacitado utilizando predicciones de formulación generadas por
                                 fórmulas actualizadas o si es necesario, mediante la igualación experimental real de
                                 colores de pintura en el laboratorio con el uso de sistemas específicos del cliente.</p>
-                            <img src="img/AMPP.webp" alt="AMPP">
+                            <img src="img/AMPP.webp" loading="lazy" alt="AMPP">
                         </div>
                     </div>
                     <div class="panel-tab" id="panel-inspecciones">
@@ -139,7 +142,7 @@
                                 observación y dictamen, acompañada cuando sea apropiado por medición, ensayo/prueba o
                                 comparación con patrones, se brindan inspecciones de:
                                 Sales, Holydays, Aderehencia, Destructivas, Shoot Blash Y de Pureza,</p>
-                            <img src="img/Inspeccion.webp" alt="Inspección">
+                            <img src="img/Inspeccion.webp" loading="lazy" alt="Inspección">
                         </div>
                     </div>
                     <div class="panel-tab" id="panel-preparacion">
@@ -150,7 +153,7 @@
                                 estándares de organismos internacionales, el equipo de expertos que nos apoya cuenta con
                                 los conocimientos y certificaciones avalados por SSPC, NACE e ISO, necesarios para
                                 capacitarle.</p>
-                            <img src="img/Preparación de superficies.webp" alt="Preparación de superficies">
+                            <img src="img/Preparación de superficies.webp" loading="lazy" alt="Preparación de superficies">
                         </div>
                     </div>
                 </div>
@@ -179,7 +182,7 @@
                                 componentes de baja viscosidad y 100% sólidos, como un compuesto orgánico volátil, por
                                 lo que no representa ningún riesgo a la salud y puede aplicarse en la mayoría de los
                                 pisos, sean industriales o decorativos.</p>
-                            <img src="img/Pisos.webp" alt="Pisos">
+                            <img src="img/Pisos.webp" loading="lazy" alt="Pisos">
                         </div>
                     </div>
                     <div class="panel-tab" id="panel-pregrout">
@@ -188,7 +191,7 @@
                             <p>Pre-grout es un fluido denso que se endurece para llenar huecos o se utiliza como
                                 refuerzo en estructuras existentes. Es una técnica para reducir la entrada de agua en
                                 túneles y cavernas, inyectando fracturas y juntas antes de la excavación.</p>
-                            <img src="img/Pre-Grout.webp" alt="Pre-Grout">
+                            <img src="img/Pre-Grout.webp" loading="lazy" alt="Pre-Grout">
                         </div>
                     </div>
                     <div class="panel-tab" id="panel-siliconado">
@@ -197,7 +200,7 @@
                             <p>En CEMSA manejamos antiadherentes y flexibles y resistentes a altas temperaturas. Existen
                                 dos tipos: los que vulcanizan a altas temperaturas y los que vulcanizan a temperatura
                                 ambiente. Además, también presentan propiedades de sellado y aislamiento.</p>
-                            <img src="img/Recubrimiento siliconado.webp" alt="Recubrimiento siliconado">
+                            <img src="img/Recubrimiento siliconado.webp" loading="lazy" alt="Recubrimiento siliconado">
                         </div>
                     </div>
                 </div>
@@ -208,7 +211,7 @@
         <section class="seccion-soporte" id="soporte">
             <div class="cabecera-soporte">
                 <div class="icono-soporte">
-                    <img src="img/icono-soporte.png" alt="Icono Soporte">
+                    <img src="img/icono-soporte.png" loading="lazy" alt="Icono Soporte">
                 </div>
                 <div class="texto-soporte">
                     <span class="etiqueta-identidad azul-etiqueta">Soporte:</span>
@@ -243,14 +246,15 @@
     </main>
 
     <!--MODALES-->
-    
+
     <!--Modal Conversión-->
     <div id="modal-conversion" class="modal-flotante">
         <div class="modal-contenido">
             <a href="#soporte" class="btn-cerrar">&times;</a>
             <h3 class="titulo-modal">Tablas de Conversión</h3>
             <ul class="lista-pdf">
-                <li><a href="Docs/Tablas/UTECH U 350 Single Stage.pdf" target="_blank">📄 UTECH U 350 Single Stage</a></li>
+                <li><a href="Docs/Tablas/UTECH U 350 Single Stage.pdf" target="_blank">📄 UTECH U 350 Single Stage</a>
+                </li>
                 <li><a href="Docs/Tablas/Tablas Sikkens.pdf" target="_blank">📄 Tablas Sikken</a></li>
                 <li><a href="Docs/Tablas/Tablas Utech.pdf" target="_blank">📄 Tablas Utech</a></li>
                 <li><a href="Docs/Tablas/Aditivos.pdf" target="_blank">📄 Aditivos</a></li>
@@ -278,26 +282,40 @@
             <a href="#soporte" class="btn-cerrar">&times;</a>
             <h3 class="titulo-modal">Tenemos algunos cursos para ti</h3>
             <ul class="lista-pdf">
-                <li><a href="Docs/Cursos/5's en el laboratorio de colorística.pdf" target="_blank">📄 5's en el laboratorio de colorística</a></li>
-                <li><a href="Docs/Cursos/7HC Siete Herramientas de la Calidad.pdf" target="_blank">📄 7HC Siete Herramientas de la Calidad</a></li>
-                <li><a href="Docs/Cursos/AkzoNobel 2023 Calendario Cursos Técnicos Presenciales).pdf" target="_blank">📄 AkzoNobel 2023 Calendario Cursos Técnicos Presenciales</a></li>
-                <li><a href="Docs/Cursos/AkzoNobel 2023 Calendario Cursos Técnicos Presenciales).pdf" target="_blank">📄 AkzoNobel 2023 Calendario Cursos Técnicos Presenciales</a></li>
-                <li><a href="Docs/Cursos/AkzoNobel 2023 Series Educacionales Online.pdf" target="_blank">📄 AkzoNobel 2023 Series Educacionales Online</a></li>
-                <li><a href="Docs/Cursos/BLCDR Balanceo de líneas en el CDR.pdf" target="_blank">📄 BLCDR Balanceo de líneas en el CDR</a></li>
-                <li><a href="Docs/Cursos/DPCDR Distribución de planta en el CDR.pdf" target="_blank">📄 DPCDR Distribución de planta en el CDR</a></li>
-                <li><a href="Docs/Cursos/DVS Desarrollo de la Valuación.pdf" target="_blank">📄 DVS Desarrollo de la Valuación</a></li>
-                <li><a href="Docs/Cursos/FAF Fundamentos de Administración Financiera.pdf" target="_blank">📄 FAF Fundamentos de Administración Financiera</a></li>
+                <li><a href="Docs/Cursos/5's en el laboratorio de colorística.pdf" target="_blank">📄 5's en el
+                        laboratorio de colorística</a></li>
+                <li><a href="Docs/Cursos/7HC Siete Herramientas de la Calidad.pdf" target="_blank">📄 7HC Siete
+                        Herramientas de la Calidad</a></li>
+                <li><a href="Docs/Cursos/AkzoNobel 2023 Calendario Cursos Técnicos Presenciales).pdf" target="_blank">📄
+                        AkzoNobel 2023 Calendario Cursos Técnicos Presenciales</a></li>
+                <li><a href="Docs/Cursos/AkzoNobel 2023 Calendario Cursos Técnicos Presenciales).pdf" target="_blank">📄
+                        AkzoNobel 2023 Calendario Cursos Técnicos Presenciales</a></li>
+                <li><a href="Docs/Cursos/AkzoNobel 2023 Series Educacionales Online.pdf" target="_blank">📄 AkzoNobel
+                        2023 Series Educacionales Online</a></li>
+                <li><a href="Docs/Cursos/BLCDR Balanceo de líneas en el CDR.pdf" target="_blank">📄 BLCDR Balanceo de
+                        líneas en el CDR</a></li>
+                <li><a href="Docs/Cursos/DPCDR Distribución de planta en el CDR.pdf" target="_blank">📄 DPCDR
+                        Distribución de planta en el CDR</a></li>
+                <li><a href="Docs/Cursos/DVS Desarrollo de la Valuación.pdf" target="_blank">📄 DVS Desarrollo de la
+                        Valuación</a></li>
+                <li><a href="Docs/Cursos/FAF Fundamentos de Administración Financiera.pdf" target="_blank">📄 FAF
+                        Fundamentos de Administración Financiera</a></li>
                 <li><a href="Docs/Cursos/HV_Sikkens_CT1.pdf" target="_blank">📄 HV_Sikkens_CT1</a></li>
                 <li><a href="Docs/Cursos/HV_Sikkens_CT2.pdf" target="_blank">📄 HV_Sikkens_CT2</a></li>
                 <li><a href="Docs/Cursos/HV_Sikkens_PT1.pdf" target="_blank">📄 HV_Sikkens_PT1</a></li>
                 <li><a href="Docs/Cursos/HV_Sikkens_PT2.pdf" target="_blank">📄 HV_Sikkens_PT2</a></li>
                 <li><a href="Docs/Cursos/HV_Wanda_WCT.pdf" target="_blank">📄 HV_Wanda_WCT</a></li>
                 <li><a href="Docs/Cursos/HV_Wanda_WPT.pdf" target="_blank">📄 HV_Wanda_WPT </a></li>
-                <li><a href="Docs/Cursos/Incrementando la Relación del Cierre de Ventas.pdf" target="_blank">📄 Incrementando la Relación del Cierre de Ventas </a></li>
-                <li><a href="Docs/Cursos/MISC Mejorando el Índece de Satisfacción del Cliente.pdf" target="_blank">📄 MISC Mejorando el Índece de Satisfacción del Cliente </a></li>
-                <li><a href="Docs/Cursos/PCE Proceso Centrado en el Entorno Español (2).pdf" target="_blank">📄 PCE Proceso Centrado en el Entorno Español </a></li>
-                <li><a href="Docs/Cursos/Registro Entrenamiento Online (ATC-05) 2023.pdf" target="_blank">📄 Registro Entrenamiento Online (ATC-05) 2023</a></li>
-                <li><a href="Docs/Cursos/Registro y Datos Medicos Entrenamiento Técnico (ATC-03) 2023.pdf" target="_blank">📄  Registro y Datos Medicos Entrenamiento Técnico (ATC-03) 2023</a></li>
+                <li><a href="Docs/Cursos/Incrementando la Relación del Cierre de Ventas.pdf" target="_blank">📄
+                        Incrementando la Relación del Cierre de Ventas </a></li>
+                <li><a href="Docs/Cursos/MISC Mejorando el Índece de Satisfacción del Cliente.pdf" target="_blank">📄
+                        MISC Mejorando el Índece de Satisfacción del Cliente </a></li>
+                <li><a href="Docs/Cursos/PCE Proceso Centrado en el Entorno Español (2).pdf" target="_blank">📄 PCE
+                        Proceso Centrado en el Entorno Español </a></li>
+                <li><a href="Docs/Cursos/Registro Entrenamiento Online (ATC-05) 2023.pdf" target="_blank">📄 Registro
+                        Entrenamiento Online (ATC-05) 2023</a></li>
+                <li><a href="Docs/Cursos/Registro y Datos Medicos Entrenamiento Técnico (ATC-03) 2023.pdf"
+                        target="_blank">📄 Registro y Datos Medicos Entrenamiento Técnico (ATC-03) 2023</a></li>
             </ul>
             <p class="nota-descarga">Puedes descargar nuestro material</p>
         </div>
@@ -309,27 +327,38 @@
             <a href="#soporte" class="btn-cerrar">&times;</a>
             <h3 class="titulo-modal">Procesos para pintar</h3>
             <ul class="lista-pdf">
-                <li><a href="Docs/Procesos/PCE Proceso Centrado en el Entorno Español.pdf" target="_blank">📄 PCE Proceso Centrado en el Entorno Español</a></li>
+                <li><a href="Docs/Procesos/PCE Proceso Centrado en el Entorno Español.pdf" target="_blank">📄 PCE
+                        Proceso Centrado en el Entorno Español</a></li>
                 <li><a href="Docs/Procesos/HV_Sikkens_CT2.pdf" target="_blank">📄 HV_Sikkens_CT2</a></li>
-                <li><a href="Docs/Procesos/DVS Desarrollo de la Valuación.pdf" target="_blank">📄 DVS Desarrollo de la Valuación</a></li>
-                <li><a href="Docs/Procesos/Registro y Datos Médicos Entrenamiento Técnico (ATC-03) 2022 (2).pdf" target="_blank">📄 Registro y Datos Médicos Entrenamiento Técnico</a></li>
+                <li><a href="Docs/Procesos/DVS Desarrollo de la Valuación.pdf" target="_blank">📄 DVS Desarrollo de la
+                        Valuación</a></li>
+                <li><a href="Docs/Procesos/Registro y Datos Médicos Entrenamiento Técnico (ATC-03) 2022 (2).pdf"
+                        target="_blank">📄 Registro y Datos Médicos Entrenamiento Técnico</a></li>
                 <li><a href="Docs/Procesos/HV_Wanda_WCT.pdf" target="_blank">📄 HV_Wanda_WCT</a></li>
                 <li><a href="Docs/Procesos/Clinica de repintado.pdf" target="_blank">📄 Clinica de repintado</a></li>
                 <li><a href="Docs/Procesos/Como contar las Pzas.pdf" target="_blank">📄 Como contar las Pzas</a></li>
                 <li><a href="Docs/Procesos/Cuando Desengrasar.pdf" target="_blank">📄 Cuando Desengrasar</a></li>
-                <li><a href="Docs/Procesos/Guia de consumos Sikkens.pdf" target="_blank">📄 Guia de consumos Sikkens</a></li>
-                <li><a href="Docs/Procesos/Pasos en la aplicacion para acabados.pdf" target="_blank">📄 Pasos en la aplicacion para acabados</a></li>
-                <li><a href="Docs/Procesos/Pasos en la Preparacion de Desbaste.pdf" target="_blank">📄 Pasos en la Preparacion de Desbaste</a></li>
-                <li><a href="Docs/Procesos/Pasos en la Preparacion para afinar.pdf" target="_blank">📄 Pasos en la Preparacion para afinar</a></li>
-                <li><a href="Docs/Procesos/Pasos Pintura en partes plasticas.pdf" target="_blank">📄 Pasos Pintura en partes plasticas</a></li>
-                <li><a href="Docs/Procesos/Pasos Reparacion Partes Plasticas.pdf" target="_blank">📄 Pasos Reparacion Partes Plasticas</a></li>
+                <li><a href="Docs/Procesos/Guia de consumos Sikkens.pdf" target="_blank">📄 Guia de consumos Sikkens</a>
+                </li>
+                <li><a href="Docs/Procesos/Pasos en la aplicacion para acabados.pdf" target="_blank">📄 Pasos en la
+                        aplicacion para acabados</a></li>
+                <li><a href="Docs/Procesos/Pasos en la Preparacion de Desbaste.pdf" target="_blank">📄 Pasos en la
+                        Preparacion de Desbaste</a></li>
+                <li><a href="Docs/Procesos/Pasos en la Preparacion para afinar.pdf" target="_blank">📄 Pasos en la
+                        Preparacion para afinar</a></li>
+                <li><a href="Docs/Procesos/Pasos Pintura en partes plasticas.pdf" target="_blank">📄 Pasos Pintura en
+                        partes plasticas</a></li>
+                <li><a href="Docs/Procesos/Pasos Reparacion Partes Plasticas.pdf" target="_blank">📄 Pasos Reparacion
+                        Partes Plasticas</a></li>
                 <li><a href="Docs/Procesos/Pictogramas.pdf" target="_blank">📄 Pictogramas</a></li>
                 <li><a href="Docs/Procesos/Reparacion Express.pdf" target="_blank">📄 Reparacion Express</a></li>
                 <li><a href="Docs/Procesos/Seguridad.pdf" target="_blank">📄 Seguridad</a></li>
                 <li><a href="Docs/Procesos/Seguridad 2.pdf" target="_blank">📄 Seguridad 2</a></li>
                 <li><a href="Docs/Procesos/Sistema de Reparacion.pdf" target="_blank">📄 Sistema de Reparacion</a></li>
-                <li><a href="Docs/Procesos/Sistema Partes Plasticas.pdf" target="_blank">📄 Sistema Partes Plasticas</a></li>
-                <li><a href="Docs/Procesos/Tiempos de Secado Sikkens.pdf" target="_blank">📄 Tiempos de Secado Sikkens</a></li>
+                <li><a href="Docs/Procesos/Sistema Partes Plasticas.pdf" target="_blank">📄 Sistema Partes Plasticas</a>
+                </li>
+                <li><a href="Docs/Procesos/Tiempos de Secado Sikkens.pdf" target="_blank">📄 Tiempos de Secado
+                        Sikkens</a></li>
             </ul>
             <p class="nota-descarga">Puedes descargar nuestro material</p>
         </div>
@@ -342,12 +371,18 @@
             <h3 class="titulo-modal">Igualación de colores</h3>
             <ul class="lista-pdf">
                 <li><a href="Docs/Igualación/Como leer un color.pdf" target="_blank">📄 Como leer un color</a></li>
-                <li><a href="Docs/Igualación/Diagrama de Igualacion.pdf" target="_blank">📄 Diagrama de Igualacion</a></li>
-                <li><a href="Docs/Igualación/Importancia de usar un manometro.pdf" target="_blank">📄 Importancia de usar un manometro</a></li>
-                <li><a href="Docs/Igualación/Numerologia de tintas.pdf" target="_blank">📄 Numerologia de tintas</a></li>
-                <li><a href="Docs/Igualación/Procesos DCA Laboratorio 1.pdf" target="_blank">📄 Procesos DCA Laboratorio 1</a></li>
-                <li><a href="Docs/Igualación/Procesos DCA Laboratorio 2.pdf" target="_blank">📄 Procesos DCA Laboratorio 2</a></li>
-                <li><a href="Docs/Igualación/Procesos DCA Laboratorio 3.pdf" target="_blank">📄 Procesos DCA Laboratorio 3</a></li>
+                <li><a href="Docs/Igualación/Diagrama de Igualacion.pdf" target="_blank">📄 Diagrama de Igualacion</a>
+                </li>
+                <li><a href="Docs/Igualación/Importancia de usar un manometro.pdf" target="_blank">📄 Importancia de
+                        usar un manometro</a></li>
+                <li><a href="Docs/Igualación/Numerologia de tintas.pdf" target="_blank">📄 Numerologia de tintas</a>
+                </li>
+                <li><a href="Docs/Igualación/Procesos DCA Laboratorio 1.pdf" target="_blank">📄 Procesos DCA Laboratorio
+                        1</a></li>
+                <li><a href="Docs/Igualación/Procesos DCA Laboratorio 2.pdf" target="_blank">📄 Procesos DCA Laboratorio
+                        2</a></li>
+                <li><a href="Docs/Igualación/Procesos DCA Laboratorio 3.pdf" target="_blank">📄 Procesos DCA Laboratorio
+                        3</a></li>
             </ul>
             <p class="nota-descarga">Puedes descargar nuestro material</p>
         </div>
@@ -359,7 +394,7 @@
             <div class="footer-top-row">
                 <!--Columna 1-->
                 <div class="footer-col">
-                    <img src="img/Cemsapng.webp" alt="Logo CEMSA" class="footer-logo-img">
+                    <img src="img/Cemsapng.webp" loading="lazy" alt="Logo CEMSA" class="footer-logo-img">
                 </div>
 
                 <!--Columna 2-->
@@ -406,36 +441,35 @@
                     <div class="alianzas-fila-superior">
                         <div class="alianzas-bloque">
                             <a href="https://www.facebook.com/TiendasUrbanCoatings" target="_blank"
-                                class="alianza-logo glow-rojo"><img src="img/Urban.webp" alt="Urban"></a>
+                                class="alianza-logo glow-rojo"><img src="img/Urban.webp" loading="lazy" alt="Urban"></a>
                             <a href="https://www.facebook.com/CEMSA-Recubrimientos-103351411241119" target="_blank"
-                                class="alianza-logo glow-azul"><img src="img/Cemsa.webp" alt="CEMSA"></a>
+                                class="alianza-logo glow-azul"><img src="img/Cemsa.webp" loading="lazy" alt="CEMSA"></a>
                             <a href="https://www.facebook.com/jarlserv?mibextid=ZbWKwL" target="_blank"
-                                class="alianza-logo glow-blanco"><img src="img/Jarl.webp" alt="Jarl"></a>
+                                class="alianza-logo glow-blanco"><img src="img/Jarl.webp" loading="lazy" alt="Jarl"></a>
                         </div>
 
                         <div class="alianzas-centro">
-                            <a href="G.html" target="_blank"
-                                class="alianza-logo alianza-principal glow-gris"><img src="img/GC22.webp"
-                                    alt="GC Grupo CEMSA"></a>
+                            <a href="G.html" target="_blank" class="alianza-logo alianza-principal glow-gris"><img
+                                    src="img/GC22.webp" loading="lazy" alt="GC Grupo CEMSA"></a>
                         </div>
 
                         <div class="alianzas-bloque">
                             <a href="https://www.facebook.com/nazareosiap/?mibextid=ZbWKwL" target="_blank"
-                                class="alianza-logo glow-naranja"><img src="img/Nazareos.webp" alt="Nazareos"></a>
+                                class="alianza-logo glow-naranja"><img src="img/Nazareos.webp" loading="lazy" alt="Nazareos"></a>
                             <a href="https://www.facebook.com/nazareosac1" target="_blank"
-                                class="alianza-logo glow-rosa"><img src="img/Nazareos AC.webp" alt="Nazareos AC"></a>
+                                class="alianza-logo glow-rosa"><img src="img/Nazareos AC.webp" loading="lazy" alt="Nazareos AC"></a>
                             <a href="https://www.facebook.com/profile.php?id=100068549594726" target="_blank"
-                                class="alianza-logo glow-verde"><img src="img/E&C.png" alt="E&C"></a>
+                                class="alianza-logo glow-verde"><img src="img/E&C.png" loading="lazy" alt="E&C"></a>
                         </div>
                     </div>
 
                     <div class="alianzas-fila-inferior">
                         <a href="https://www.facebook.com/EPP-107946225493285" target="_blank"
-                            class="alianza-logo glow-amarillo"><img src="img/EPP.webp" alt="EPP"></a>
+                            class="alianza-logo glow-amarillo"><img src="img/EPP.webp" loading="lazy" alt="EPP"></a>
                         <a href="https://www.facebook.com/KumonSanJuanTultepec" target="_blank"
-                            class="alianza-logo glow-celeste"><img src="img/Kumon.webp" alt="Kumon"></a>
+                            class="alianza-logo glow-celeste"><img src="img/Kumon.webp" loading="lazy" alt="Kumon"></a>
                         <a href="https://www.facebook.com/profile.php?id=61572248146579" target="_blank"
-                            class="alianza-logo glow-cian"><img src="img/Spacioss.png" alt="Spacioss"></a>
+                            class="alianza-logo glow-cian"><img src="img/Spacioss.png" loading="lazy" alt="Spacioss"></a>
                     </div>
                 </div>
             </div>
