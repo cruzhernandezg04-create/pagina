@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="img/cemsis.webp">
-    <title>CEMSA </title>
+    <title>CEMSA</title>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVL1WCKRJ7"></script>
     <script>
@@ -55,7 +55,7 @@
     <!--SECCIÓN BIENVENIDOS-->
     <section class="bienvenidos">
         <div class="bienvenidos-img">
-            <img src="img/aplicadorDeRecubrimientos.webp" alt="Aplicador de recubrimiento">
+            <img src="img/CEMSA empresa.webp" alt="CEMSA empresa">
         </div>
         <div class="bienvenidos-texto">
             <span class="etiqueta-texto">BIENVENIDOS</span>
@@ -71,13 +71,21 @@
 
     <!--SECCIÓN DE SERVICIOS-->
     <section class="servicios">
-        <div class="servicios-cabecera">
-            <span class="etiqueta-texto gris">NUESTROS SERVICIOS</span>
-            <h2 class="titulo-seccion">¿Cómo podemos ayudarte?</h2>
-            <p class="subtitulo-seccion">Nos enfocamos en la compra, venta, distribución y aplicación de recubrimientos
-                industriales, arquitectónicos y automotrices comprometidas con el desarrollo de servicios cuyos costos y
-                calidades son comparables o superiores a los de nuestros competidores.</p>
-            <a href="servicios.html" class="btn-explorar btn-espaciado">Ver todos los servicios</a>
+        <div class="servicios-contenedor-flex">
+            <div class="servicios-cabecera">
+                <span class="etiqueta-texto gris">NUESTROS SERVICIOS</span>
+                <h2 class="titulo-seccion">¿Cómo podemos ayudarte?</h2>
+                <p class="subtitulo-seccion">Nos enfocamos en la compra, venta, distribución y aplicación de
+                    recubrimientos
+                    industriales, arquitectónicos y automotrices comprometidas con el desarrollo de servicios cuyos
+                    costos y
+                    calidades son comparables o superiores a los de nuestros competidores.</p>
+                <a href="servicios.html" class="btn-explorar btn-espaciado">Ver todos los servicios</a>
+            </div>
+
+            <div class="servicios-imagen">
+                <img src="img/aplicadorDeRecubrimientos.webp" alt="Aplicador De Recubrimientos">
+            </div>
         </div>
 
         <div class="grid-servicios">
@@ -131,7 +139,7 @@
                 <img src="img/sikkens1.webp" alt="sikkens" class="slide activa">
                 <img src="img/wanda2.webp" alt="wanda" class="slide">
                 <img src="img/hempel2.webp" alt="Hempel" class="slide">
-                <img src="img/u-tech1.webp" alrt="U-Tech" class="slide">
+                <img src="img/u-tech1.webp" alt="U-Tech" class="slide">
                 <img src="img/internacional1.webp" alt="Internacional" class="slide">
             </div>
             <div class="centrar-boton">
@@ -209,6 +217,7 @@
                     así como
                     el apoyo para que su negocio sea más eficiente en tiempos y rentable en costos.
                 </p>
+                <a href="servicios.html#soporte" class="btn-explorar btn-espaciado">Ver mas... →</a>
             </div>
 
             <div class="columna-info">
@@ -310,7 +319,6 @@
 
         </div>
 
-        </div>
     </section>
 
     <!--SECCIÓN DE CONTACTO-->
@@ -354,9 +362,9 @@
             <!--Mapa de Google-->
             <div class="contacto-mapa">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3757.4808794386395!2d-99.1239451!3d19.6494793!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f440306156a3%3A0x17e336b2b2b06844!2sCEMSA%20Recubrimientos!5e0!3m2!1ses-419!2smx!4v1791310033450!5m2!1ses-419!2smx"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3757.508550017071!2d-99.1251493163952!3d19.64829756894484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f440306156a3%3A0x17e336b2b2b06844!2sCEMSA%20Recubrimientos!5e0!3m2!1ses!2smx!4v1657134794102!5m2!1ses!2smx"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="strict-origin-when-cross-origin">"
+                    referrerpolicy="strict-origin-when-cross-origin">
                 </iframe>
             </div>
         </div>
@@ -456,21 +464,22 @@
             </p>
         </div>
     </footer>
-<!--SISTEMA DE COOKIES y GOOGLE ANALYTICS-->
-         
+
+    <!--SISTEMA DE COOKIES y GOOGLE ANALYTICS-->
+
     <!-- 1. Configuración de Google Analytics (Consent Mode) -->
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+        function gtag() { dataLayer.push(arguments); }
 
         // Revisa si el usuario ya había aceptado antes; si no, bloquea el rastreo por defecto
         let estadoPrevio = localStorage.getItem('cookiesAnaliticas') === 'true' ? 'granted' : 'denied';
-        
+
         gtag('consent', 'default', {
             'analytics_storage': estadoPrevio
         });
     </script>
-    
+
     <!-- Tu etiqueta original de gtag.js -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CVL1WCKRJ7"></script>
     <script>
@@ -482,7 +491,8 @@
     <div id="cookie-banner" class="cookie-banner">
         <div class="cookie-texto">
             <h3 style="margin-top:0; color:var(--color-azul);">Privacidad y Cookies</h3>
-            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte contenido personalizado. Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias.</p>
+            <p>Utilizamos cookies propias y de terceros para fines analíticos y para mostrarte contenido personalizado.
+                Puedes aceptar todas las cookies, rechazarlas o configurar tus preferencias.</p>
         </div>
         <div class="cookie-botones">
             <button id="btn-configurar" class="btn-cookie btn-secundario">Configurar</button>
@@ -495,25 +505,27 @@
     <div id="cookie-modal" class="cookie-modal">
         <div class="cookie-modal-contenido">
             <h3 style="color:var(--color-azul); margin-top:0;">Configuración de Cookies</h3>
-            <p style="font-size: 0.9rem; color: #555;">Selecciona qué tipo de cookies deseas permitir en tu navegador:</p>
-            
+            <p style="font-size: 0.9rem; color: #555;">Selecciona qué tipo de cookies deseas permitir en tu navegador:
+            </p>
+
             <div class="opcion-cookie">
                 <label>
-                    <input type="checkbox" checked disabled> 
+                    <input type="checkbox" checked disabled>
                     <strong>Técnicas (Obligatorias)</strong>
                 </label>
                 <p>Son necesarias para que la página funcione. No se pueden desactivar.</p>
             </div>
-            
+
             <div class="opcion-cookie">
                 <label>
-                    <input type="checkbox" id="check-analiticas" checked> 
+                    <input type="checkbox" id="check-analiticas" checked>
                     <strong>Google Analytics</strong>
                 </label>
                 <p>Nos ayudan a entender cómo usas la página para mejorar su diseño y funcionalidad.</p>
             </div>
 
-            <button id="btn-guardar-config" class="btn-cookie btn-principal" style="width:100%; margin-top:20px;">Guardar Preferencias</button>
+            <button id="btn-guardar-config" class="btn-cookie btn-principal"
+                style="width:100%; margin-top:20px;">Guardar Preferencias</button>
         </div>
     </div>
 
@@ -521,7 +533,7 @@
     <script>
         const bannerCookies = document.getElementById('cookie-banner');
         const modalCookies = document.getElementById('cookie-modal');
-        
+
         // Muestra el banner si es la primera vez que entra
         if (!localStorage.getItem('estadoCookies')) {
             bannerCookies.classList.add('activo');
@@ -561,7 +573,7 @@
             bannerCookies.classList.remove('activo');
         });
     </script>
-    
+
     <!--SCRIPT PARA EL FUNCIONAMIENTO DEL CARRUSEL-->
     <script>
         let slideActual = 0;
